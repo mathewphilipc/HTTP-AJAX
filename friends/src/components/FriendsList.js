@@ -12,8 +12,14 @@ class FriendsList extends Component {
 
 	render() {
 		return (
-			<h1>testtesttest</h1>
-		)
+			<h1>
+				{this.props.friends.map((friend, i) => {
+					return(
+						<Friend key={i} index={i} friend={friend} />
+					);
+				})}
+			</h1>
+		);
 	}
 }
 
